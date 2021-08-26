@@ -12,11 +12,9 @@ const Pop = styled("p")`
 class About extends Component {
   static componentWillServerRender = ({ store: { dispatch } }) => {
     const promises = [];
-    console.log("working ssr");
     var a = apiService("https://api.github.com/users/iliakan", { method: "get" }).then(
       response => {
         if (response) {
-            console.log(response)
             dispatch({ type: "CHANGE_CONTENT", data: JSON.stringify(response)});
           // changeTitle(JSON.stringify(response));
         }
@@ -36,7 +34,6 @@ class About extends Component {
     apiService("https://api.github.com/users/iliakan", { method: "get" }).then(
       response => {
         if (response) {
-            console.log(response)
           changeContent(JSON.stringify(response));
         }
       }
