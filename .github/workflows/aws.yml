@@ -22,5 +22,5 @@ jobs:
     - run: npm run build 
     
     - name: Deploy app build to S3 bucket
-    - run: aws s3 sync ./dist/ s3://vinreactbasic --delete
+      run: aws s3 sync ./dist/ s3://vinreactbasic --delete
       
