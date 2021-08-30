@@ -15,6 +15,7 @@ jobs:
          node-version: [12.x]
      
     steps: 
+    - run: actions/checkout@v1
     - run: npm install
     - run: npm run build
 
