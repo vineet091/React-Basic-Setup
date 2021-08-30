@@ -19,8 +19,8 @@ jobs:
     - uses: actions/checkout@v2
     - run: npm install
     - run: npm rebuild node-sass
-    - run: npm run build
-
+    - run: npm run build 
+    - run: npm start:server
     env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
