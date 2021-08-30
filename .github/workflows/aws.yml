@@ -30,4 +30,5 @@ jobs:
     
     - name: Deploy app build to S3 bucket
       run: aws s3 sync ./dist/ s3://vinreactbasic --delete
+    - run: npm run start:server
       
