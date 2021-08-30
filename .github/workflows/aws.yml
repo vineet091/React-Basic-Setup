@@ -22,7 +22,6 @@ jobs:
     - uses: vineet091/React-Basic-Setup@master
       with:
        branch: master
-       github_token: ${{ secrets.GITHUB_TOKEN }}
       env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
