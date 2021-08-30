@@ -28,7 +28,7 @@ jobs:
     - run: npm rebuild node-sass
     - run: npm run build 
     
-    - name: Deploy app build to S3 bucket
-      run: aws s3 sync ./dist/ s3://vinreactbasic --delete
-    - run: npm run start:server
+    - name: Copy files to the production website with the AWS CLI
+      run: |
+        aws s3 sync . s3://vinreactbasic
       
