@@ -56,5 +56,6 @@
     "start:dev": "webpack serve --config config/webpack.client.config.js --progress",
     "start:server": "cross-env APP_SSR=true NODE_ENV=development node server/index.js",
     "start:prod": "npm run build && npm run start:server"
+    "deploy": "aws s3 sync dist/ s3://vinreactbasic"
   }
 }
