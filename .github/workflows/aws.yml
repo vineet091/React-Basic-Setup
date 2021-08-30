@@ -7,7 +7,8 @@ on:
 
 
 jobs: 
-  build:
+ build:
+    name: build-and-deploy
     runs-on: ubuntu-latest
     
     strategy:
@@ -15,14 +16,11 @@ jobs:
          node-version: [12.x]
      
     steps: 
-    - run: actions/checkout@v2
+    - uses: actions/checkout@v2
     - run: npm install
     - run: npm run build
 
-    - uses: vineet091/React-Basic-Setup@master
-      with:
-       branch: master
-      env:
+    env:
         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
