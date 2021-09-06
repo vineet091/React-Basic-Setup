@@ -37,7 +37,7 @@ class App extends Component {
         </Pop>
         <Pop className="App-intro">
           <button onClick={() => this.getData()}>Change Title</button>
-          <Link to="/about">Route To About</Link>
+          <Link to="/about">Route To New About</Link>
         </Pop>
       </div>
     );
