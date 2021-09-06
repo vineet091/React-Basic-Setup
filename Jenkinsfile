@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'npm install'
-                sh 'npm install node-sass'
+                sh 'npm rebuild node-sass'
                 sh 'npm run build'
             }
         }
