@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'npm run start:server'
+                sh 'ls'
             }
         }
     }
