@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'npm install'
-                sh 'npm build'
+                sh 'npm run build'
             }
         }
     }
