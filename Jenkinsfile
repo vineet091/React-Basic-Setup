@@ -22,6 +22,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'node --version'
                 sh 'npm install'
                 sh 'npm build'
             }
