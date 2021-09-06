@@ -1,17 +1,15 @@
 pipeline {
-  agent any
-   environment {
-       AWS_DEFAULT_REGION="us-east-2"
-   }
-    agent {
+   agent {
         docker {
             image 'node:6-alpine'
             args '-p 3000:3000'
         }
-    }
-    environment {
-        CI = 'true' 
-    }
+   }
+   environment {
+       AWS_DEFAULT_REGION="us-east-2"
+       CI = 'true' 
+   }
+
     stages {
         stage('Check-AWS-Instance') {
             steps{
