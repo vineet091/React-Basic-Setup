@@ -13,6 +13,6 @@ app.use("*", renderMiddleware);
 
 
 // run express server on port 9000
-app.listen( '8080', () => {
-    console.log( 'Express server started at http://localhost:8080' );
+app.listen( '3000', () => {
+    console.log( 'Express server started at http://localhost:3000' );
 } );
